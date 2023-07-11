@@ -49,4 +49,4 @@ const getMyTask = () => {
     }));
   };
 
-window.addEventListener('load', getmytask);
+window.addEventListener('load', getMyTask);
