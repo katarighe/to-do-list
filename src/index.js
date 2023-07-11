@@ -28,7 +28,7 @@ const mytask = [
     }
 ];
 
-const getMyTask = () => {
+const getmyTask = () => {
     const listGroup = document.querySelector('.to-do-group');
     mytask.map((item => {
       const listElement = document.createElement('li');
@@ -49,4 +49,4 @@ const getMyTask = () => {
     }));
   };
 
-window.addEventListener('load', getMyTask);
+window.addEventListener('load', getmyTask);
