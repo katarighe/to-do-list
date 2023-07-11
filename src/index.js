@@ -36,7 +36,7 @@ const getMyTask = () => {
       listElement.id = `${item.index}`;
       listElement.innerHTML = `
         <button type="button" class="
-          ${item.completed === true ? 'checked-button' : 'unchecked-button'}
+          ${item.completed === true ? 'check-button' : 'uncheck-button'}
         ">
           <i class="fa-solid fa-check"></i>
         </button>
