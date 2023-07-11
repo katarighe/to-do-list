@@ -41,7 +41,7 @@ const getMyTask = () => {
           <i class="fa-solid fa-check"></i>
         </button>
         <input type="text" class="
-          ${item.completed === true ? 'decoration' : 'undecoration'}
+          ${item.completed === true ? 'decorate' : 'undecorate'}
         " value="${item.description}">
         <span class="to-do-item-more"><i class="fa-solid fa-ellipsis-vertical"></i></span>
       `;
