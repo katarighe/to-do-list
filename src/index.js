@@ -1,6 +1,6 @@
 import './style.css';
 
-const mytasks = [
+const mytask = [
     {
         description: "Buy groceries",
         completed: false,
@@ -25,5 +25,28 @@ const mytasks = [
         description: "Wash the car",
         completed: false,
         index: 5
-      }
+    }
 ];
+
+const getMyTask = () => {
+    const listGroup = document.querySelector('.to-do-group');
+    mytask.map((item => {
+      const listElement = document.createElement('li');
+      listElement.classList = 'to-do-list to-do-item';
+      listElement.id = `${item.index}`;
+      listElement.innerHTML = `
+        <button type="button" class="
+          ${item.completed === true ? 'checked-button' : 'unchecked-button'}
+        ">
+          <i class="fa-solid fa-check"></i>
+        </button>
+        <input type="text" class="
+          ${item.completed === true ? 'decoration' : 'undecoration'}
+        " value="${item.description}">
+        <span class="to-do-item-more"><i class="fa-solid fa-ellipsis-vertical"></i></span>
+      `;
+      listGroup.appendChild(listElement);
+    }));
+  };
+
+window.addEventListener('load', getmytask);
