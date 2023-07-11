@@ -3,7 +3,7 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -74,7 +74,7 @@ body {
 }
 
 .to-do-add input::placeholder {
-  color: #ddd;
+  color: #808080;
 }
 
 .to-do-add i {
@@ -145,5 +145,5 @@ body {
 }
 
 .clear-to-do-list span {
-  color: black;
+  color: #000;
 }
