@@ -22,7 +22,7 @@ const mytask = [
         index: 4
     },
     {
-        description: "Wash the car and garage",
+        description: "Wash the car",
         completed: false,
         index: 5
     }
