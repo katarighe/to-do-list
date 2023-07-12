@@ -1,4 +1,3 @@
-//eslint-disable-line
 import './style.css';
 
 import { getmyTask } from './modules/interface.js'
