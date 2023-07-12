@@ -125,7 +125,7 @@ Example:
 👤 **Mohamed Aden Ighe**
 
 - GitHub: [@katarighe](https://github.com/katarighe)
-- Twitter: [@AthlonWI](https://twitter.com/AthlonWI)
+- Twitter: [@katarighe](https://twitter.com/katarighe)
 - LinkedIn: [@mighe](https://linkedin.com/in/mighe)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
