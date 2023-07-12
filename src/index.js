@@ -1,14 +1,13 @@
+//eslint-disable-line
 import './style.css';
 
-import { getmytask } from './interface.js'
+import { getmyTask } from './interface.js'
 
-import {
-  addmytask, editmytask, deletemytask
-} from './modules/functions.js';
+import { addmyTask, editmyTask, deletemyTask } from './modules/functions.js';
 
 import { changetodostatus, removecompletedtodos } from './status.js';
 
-const mytask = [
+const myTask = [
   {
     description: 'Buy groceries',
     completed: false,
@@ -36,9 +35,9 @@ const mytask = [
   },
 ];
 
-const getmytask = () => {
+const getmyTask = () => {
   const listGroup = document.querySelector('.to-do-group');
-  mytask.map((item) => {
+  myTask.map((item) => {
     const listElement = document.createElement('li');
     listElement.classList = 'to-do-list to-do-item';
     listElement.id = `${item.index}`;
@@ -56,4 +55,4 @@ const getmytask = () => {
   });
 };
 
-window.addEventListener('load', getmytask);
+window.addEventListener('load', getmyTask);
