@@ -44,10 +44,10 @@ const addmyTask = (event) => {
 
 const editmyTask = ({ index, event }) => {
   if (event.target.value === '') return;
-  if (event.key === 'Enter') {
+  event.target.addEventListener('blur', () => {
     myTask[index - 1].description = event.target.value;
     localStorage.setItem('myTask', JSON.stringify(myTask));
-  }
+  });
 };
 
 const deletemyTask = (targetIndex) => {
