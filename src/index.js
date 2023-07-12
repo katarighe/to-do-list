@@ -1,10 +1,6 @@
 import './style.css';
 
-import { getmyTask } from './modules/interface.js';
-
 import { addmyTask, editmyTask, deletemyTask } from './modules/functions.js';
-
-import { changeTaskStatus, removeCompletedTasks } from './modules/status.js';
 
 // Start
 const listGroup = document.querySelector('.to-do-group');
@@ -30,4 +26,4 @@ listGroup.addEventListener('keypress', (event) => {
 const clearCompleted = document.querySelector('.clear-to-do');
 clearCompleted.addEventListener('click', removeCompletedTasks);
 
-window.addEventListener('load', () => { getmylist(); });
+window.addEventListener('load', () => { getmyTask(); });
