@@ -1,6 +1,6 @@
 import './style.css';
 
-import { addmyTask, editmyTask, deletemyTask, getmyTask } from './modules/functions.js';
+import { getmyTask, addmyTask, editmyTask, deletemyTask } from './modules/functions.js';
 
 // Start
 const listGroup = document.querySelector('.to-do-group');
