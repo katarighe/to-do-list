@@ -1,2 +1,2 @@
-let mylist = JSON.parse(localStorage.getItem('mylist')) || [];
+let mylist = JSON.parse(localStorage.getItem('myTask')) || [];
 
