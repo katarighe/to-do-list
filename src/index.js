@@ -1,5 +1,13 @@
 import './style.css';
 
+import { getmytask } from './interface.js'
+
+import {
+  addmytask, editmytask, deletemytask
+} from './functions.js';
+
+import { changetodostatus, removecompletedtodos } from './todostatus.js';
+
 const mytask = [
   {
     description: 'Buy groceries',
