@@ -168,11 +168,3 @@ body {
 .delete-icon:active ~ .more-icon {
   display: none;
 }
-
-.add-button {
-  color: #000;
-  background-color: #eee;
-  cursor: pointer;
-  padding: 5px;
-  border: none;
-}
