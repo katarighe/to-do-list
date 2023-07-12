@@ -147,3 +147,26 @@ body {
 .clear-to-do-list span {
   color: #808080;
 }
+
+.edit-focus-element {
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: 0;
+  background-color: #fff;
+}
+
+.edit-to-do:focus ~ .edit-focus-element {
+  background-color: #fffcbf;
+}
+
+.edit-to-do:focus ~ .more-icon {
+  display: none;
+}
+
+.delete-icon:active ~ .more-icon {
+  display: none;
+}
