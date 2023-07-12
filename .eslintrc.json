@@ -15,6 +15,7 @@
       "no-param-reassign": "off",
       "eol-last": "off",
       "linebreak-style": 0,
+      "comma-dangle": "off",
       "import/extensions": [ 1, {
         "js": "always", "json": "always"
       }]
