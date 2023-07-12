@@ -1,5 +1,8 @@
-const ls = () => (JSON.parse(localStorage.getItem('myTask'))
-  ? JSON.parse(localStorage.getItem('myTask')) : []);
+const ls = () => {
+  const tasks = localStorage.getItem('myTask')
+    ? JSON.parse(localStorage.getItem('myTask')) : [];
+  return tasks;
+};
 
 const setTask = (ml) => {
   localStorage.setItem('myTask', JSON.stringify(ml));
