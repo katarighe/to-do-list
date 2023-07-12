@@ -90,9 +90,10 @@ The To Do List project is built and configured using the following tools:
 
 > The features of the To Do List includes:
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- **Adding a new task**
+- **Removing a listed task**
+- **Marking a selected item as "complete"***
+- **Removing all listed items at once**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -100,9 +101,9 @@ The To Do List project is built and configured using the following tools:
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
+> The Live Demo of the project will be deployed here soon, so stay tuned!
 
-- [Live Demo Link](https://google.com)
+<!-- - [Live Demo Link](https://google.com) -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -178,11 +179,11 @@ You can deploy this project using [GitHub Pages](https://pages.github.com/), it 
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
+> The following featurs will be add to the project in the future.
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **Add Button**: The Add Button will be added into the application for better convience when interacting with the mouse. 
+- [ ] **Categories**: This feature will help us divide the To Do list into different categories such as Home, Work, and Travel. 
+- [ ] **Better User Interface (UI)**: Improving the UI of the To Do List will help users visitng this app more friendly and accessible.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
