@@ -1,51 +1,29 @@
 import './style.css';
 
-const mytask = [
-  {
-    description: 'Buy groceries',
-    completed: false,
-    index: 1,
-  },
-  {
-    description: 'Clean the house',
-    completed: false,
-    index: 2,
-  },
-  {
-    description: 'Go to the gym',
-    completed: false,
-    index: 3,
-  },
-  {
-    description: 'Make some breakfast',
-    completed: false,
-    index: 4,
-  },
-  {
-    description: 'Wash the car',
-    completed: false,
-    index: 5,
-  },
-];
+import {
+  getmyTask,
+  // Line break here.
+  addmyTask,
+  editmyTask,
+  deletemyTask,
+} from './modules/functions.js';
 
-const getmytask = () => {
-  const listGroup = document.querySelector('.to-do-group');
-  mytask.map((item) => {
-    const listElement = document.createElement('li');
-    listElement.classList = 'to-do-list to-do-item';
-    listElement.id = `${item.index}`;
-    listElement.innerHTML = `
-        <button type='button" class=${
-  item.completed === true ? 'check-button' : 'uncheck-button'
-}>
-        <i class='fa-solid fa-check'></i></button>
-        <input type="text" class=${
-  item.completed === true ? 'decorate' : 'undecorate'
-} value="${item.description}">
-        <span class='to-do-item-more'><i class='fa-solid fa-ellipsis-vertical'></i></span>
-        `;
-    return listGroup.appendChild(listElement);
-  });
-};
+const listGroup = document.querySelector('.to-do-group');
+const newTask = document.querySelector('.to-do-add').querySelector('input');
+const submitIcon = document.querySelector('.to-do-add').querySelector('i');
+newTask.addEventListener('keypress', (event) => addmyTask(event));
+submitIcon.addEventListener('click', () => addmyTask('clicked'));
 
-window.addEventListener('load', getmytask);
+listGroup.addEventListener('click', (event) => {
+  const clickedItem = event.target.classList[event.target.classList.length - 1];
+  const li = event.target.parentElement;
+  if (clickedItem === 'delete-icon') deletemyTask(li.id);
+});
+
+listGroup.addEventListener('keypress', (event) => {
+  const pressedItem = event.target.classList[event.target.classList.length - 1];
+  const li = event.target.parentElement;
+  if (pressedItem === 'edit-to-do') editmyTask({ index: li.id, event });
+});
+
+window.addEventListener('load', () => { getmyTask(); });
