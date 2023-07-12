@@ -4,9 +4,9 @@ import { getmytask } from './interface.js'
 
 import {
   addmytask, editmytask, deletemytask
-} from './functions.js';
+} from './modules/functions.js';
 
-import { changetodostatus, removecompletedtodos } from './todostatus.js';
+import { changetodostatus, removecompletedtodos } from './status.js';
 
 const mytask = [
   {
