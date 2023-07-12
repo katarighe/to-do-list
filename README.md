@@ -92,7 +92,7 @@ The To Do List project is built and configured using the following tools:
 
 - **Adding a new task**
 - **Removing a listed task**
-- **Marking a selected item as "complete"***
+- **Marking a selected item as "complete"**
 - **Removing all listed items at once**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
