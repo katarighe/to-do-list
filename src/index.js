@@ -1,8 +1,13 @@
 import './style.css';
 
-import { getmyTask, addmyTask, editmyTask, deletemyTask } from './modules/functions.js';
+import {
+  getmyTask,
+  // Line break here.
+  addmyTask,
+  editmyTask,
+  deletemyTask,
+} from './modules/functions.js';
 
-// Start
 const listGroup = document.querySelector('.to-do-group');
 const newTask = document.querySelector('.to-do-add').querySelector('input');
 const submitIcon = document.querySelector('.to-do-add').querySelector('i');
