@@ -1,11 +1,11 @@
 //eslint-disable-line
 import './style.css';
 
-import { getmyTask } from './interface.js'
+import { getmyTask } from './modules/interface.js'
 
 import { addmyTask, editmyTask, deletemyTask } from './modules/functions.js';
 
-import { changetodostatus, removecompletedtodos } from './status.js';
+import { changetodostatus, removecompletedtodos } from './modules/status.js';
 
 const myTask = [
   {
