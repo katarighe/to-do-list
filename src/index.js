@@ -28,8 +28,8 @@ listGroup.addEventListener('click', event => {
 
   const li = event.target.parentElement;
   if (clickedItem === 'delete-icon') deletemyTask(li.id);
-  if (clickedItem === 'checked-icon') changeTaskStatus({ index: li.id, status: false });
-  if (clickedItem === 'unchecked-icon') changeTaskStatus({ index: li.id, status: true });
+  if (clickedItem === 'check-icon') changeTaskStatus({ index: li.id, status: false });
+  if (clickedItem === 'uncheck-icon') changeTaskStatus({ index: li.id, status: true });
 });
 
 listGroup.addEventListener('keypress', (event) => {
