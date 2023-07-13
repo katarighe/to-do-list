@@ -27,7 +27,6 @@ listGroup.addEventListener('click', (event) => {
   }
 
   const li = event.target.parentElement;
-  if (clickedItem === 'refresh-icon') window.location.reload();
   if (clickedItem === 'add-icon') addmyTask(li.id);
   if (clickedItem === 'delete-icon') deletemyTask(li.id);
   if (clickedItem === 'check-icon') changeTaskStatus({ index: li.id, status: false });
