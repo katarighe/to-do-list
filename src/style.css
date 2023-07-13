@@ -175,7 +175,7 @@ body {
 .clear-to-do-list span:hover {
   opacity: 1;
   color: #000;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .edit-focus-element {
