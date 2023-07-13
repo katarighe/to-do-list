@@ -11,20 +11,25 @@ const getmyTask = () => {
   ${
   item.completed === true
     ? `
-  <i class="fa-solid fa-check checked-icon"></i>`
-    : '<i class="fa-solid fa-square unchecked-icon"></i>'
+  <i class="fa-solid fa-square-check check-icon" title="Mark task as incomplete"></i>`
+    : '<i class="fa-solid fa-square uncheck-icon" title="Mark task as complete"></i>'
 }
       <input type="text" class=${
   item.completed === true ? 'decoration edit-to-do' : 'edit-to-do'
-}  value='${item.description}'>
+}  value='${item.description}' title="Edit this task">
           <span class='edit-focus-element'></span>
-          <i class='fa-solid fa-trash-can delete-icon'></i>
-          <i class='fa-solid fa-ellipsis-vertical more-icon'></i>
+          <i class='fa-solid fa-trash delete-icon' title='Remove a task'></i>
+          <i class='fa-solid fa-ellipsis-vertical more-icon' title='See more'></i>
         </li>`
     )
     .join('');
   taskGroup.innerHTML = myTaskElement;
   return taskGroup;
+};
+
+const updateInterface = (data) => {
+  myTask = data;
+  getmyTask();
 };
 
 const addmyTask = (event) => {
@@ -64,8 +69,10 @@ const deletemyTask = (targetIndex) => {
 
 export {
   getmyTask,
-  // Line break here.
+  // Line break here
   addmyTask,
   editmyTask,
   deletemyTask,
+  myTask,
+  updateInterface,
 };

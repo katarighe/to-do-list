@@ -11,7 +11,7 @@ body {
   display: grid;
   align-items: center;
   justify-content: center;
-  background-color: #f1f2f5;
+  background-color: #ffdab9;
 }
 
 .to-do-container {
@@ -20,8 +20,8 @@ body {
   min-height: 50vh;
   margin: 10vh 0;
   background-color: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  border-radius: 3px;
+  box-shadow: 0 10px 10px rgba(10, 10, 10, 0.15);
+  border-radius: 10px;
   padding-bottom: 100px;
   position: relative;
   overflow: hidden;
@@ -43,13 +43,15 @@ body {
 
 .to-do-intro {
   font-size: 15px;
+  background-color: #f5f5dc;
 }
 
 .to-do-intro-title {
   font-size: 20px;
-  color: black;
+  color: #000;
   text-align: center;
   justify-content: center;
+  background-color: #f5f5dc;
 }
 
 .to-do-intro i {
@@ -81,20 +83,22 @@ body {
   font-size: 12px;
 }
 
-.uncheck-button,
-.check-button {
+.uncheck-icon,
+.check-icon {
   outline: none;
   border: none;
 }
 
-.check-button {
+.check-icon {
   background: transparent;
   color: #2e2e2e;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 20px;
+  width: 18px;
+  height: 18px;
 }
 
-.uncheck-button {
+.uncheck-icon {
   width: 18px;
   height: 18px;
   border-radius: 3px;
@@ -125,11 +129,31 @@ body {
   text-decoration: none;
 }
 
+.delete-icon,
+.more-icon {
+  font-size: 20px;
+  opacity: 0.5;
+  color: #000;
+  cursor: pointer;
+}
+
+.delete-icon {
+  display: none;
+}
+
+.more-icon {
+  display: block;
+}
+
 .to-do-item-more {
   font-size: 16px;
   opacity: 0.5;
   color: #333;
   cursor: pointer;
+}
+
+.more-icon:hover {
+  color: #800080;
 }
 
 .clear-to-do-list {
@@ -139,13 +163,19 @@ body {
   bottom: 0;
   outline: none;
   border: 1px;
-  background-color: #f1f2f5;
+  background-color: #f5f5dc;
   font-size: 16px;
   cursor: pointer;
 }
 
 .clear-to-do-list span {
-  color: #808080;
+  color: #ec5242;
+}
+
+.clear-to-do-list span:hover {
+  opacity: 1;
+  color: #000;
+  text-decoration: none;
 }
 
 .edit-focus-element {
@@ -157,8 +187,20 @@ body {
   background-color: #fff;
 }
 
+.delete-icon:active {
+  display: block;
+}
+
+.delete-icon:hover {
+  color: #f00;
+}
+
 .edit-to-do:focus ~ .edit-focus-element {
   background-color: #fffcbf;
+}
+
+.edit-to-do:focus ~ .delete-icon {
+  display: block;
 }
 
 .edit-to-do:focus ~ .more-icon {
@@ -167,4 +209,34 @@ body {
 
 .delete-icon:active ~ .more-icon {
   display: none;
+}
+
+.refresh-icon {
+  color: #000;
+  cursor: pointer;
+}
+
+.refresh-icon::before {
+  font-size: 20px;
+}
+
+.refresh-icon:hover {
+  opacity: 1;
+  color: #add8e6;
+  text-decoration: none;
+}
+
+.add-icon {
+  color: #808080;
+  cursor: pointer;
+}
+
+.add-icon::before {
+  font-size: 20px;
+}
+
+.add-icon:hover {
+  opacity: 1;
+  color: #90ee90;
+  text-decoration: none;
 }
