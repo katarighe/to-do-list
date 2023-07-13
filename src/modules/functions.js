@@ -11,8 +11,8 @@ const getmyTask = () => {
   ${
   item.completed === true
     ? `
-  <i class="fa-solid fa-square-check checked-icon"></i>`
-    : '<i class="fa-solid fa-square unchecked-icon"></i>'
+  <i class="fa-solid fa-square-check check-icon"></i>`
+    : '<i class="fa-solid fa-square uncheck-icon"></i>'
 }
       <input type="text" class=${
   item.completed === true ? 'decoration edit-to-do' : 'edit-to-do'
