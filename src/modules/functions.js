@@ -27,6 +27,11 @@ const getmyTask = () => {
   return taskGroup;
 };
 
+const updateUI = (data) => {
+  myTask = data;
+  getmyTask();
+}
+
 const addmyTask = (event) => {
   if (newTask.value === '') return;
   if (event.key === 'Enter' || event === 'clicked') {
@@ -68,4 +73,6 @@ export {
   addmyTask,
   editmyTask,
   deletemyTask,
+  myTask,
+  updateUI,
 };
