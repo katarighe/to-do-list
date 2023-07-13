@@ -101,9 +101,9 @@ The To Do List project is built and configured using the following tools:
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> The Live Demo of the project will be deployed here soon, so stay tuned!
+> The Live Demo of the project is live! Please click the link below. 👇
 
-<!-- - [Live Demo Link](https://google.com) -->
+[Live Demo Link](https://katarighe.github.io/to-do-list/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
