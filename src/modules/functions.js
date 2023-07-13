@@ -1,4 +1,4 @@
-let myTask = JSON.parse(localStorage.getItem('myTask')) || []; // eslint-disable-line
+let myTask = JSON.parse(localStorage.getItem('myTask')) || [];
 
 const taskGroup = document.querySelector('.to-do-group');
 const newTask = document.querySelector('.to-do-add').querySelector('input');
