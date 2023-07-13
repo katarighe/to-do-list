@@ -18,8 +18,8 @@ const getmyTask = () => {
   item.completed === true ? 'decoration edit-to-do' : 'edit-to-do'
 }  value='${item.description}'>
           <span class='edit-focus-element'></span>
-          <i class='fa-solid fa-trash delete-icon'></i>
-          <i class='fa-solid fa-ellipsis-vertical more-icon'></i>
+          <i class='fa-solid fa-trash delete-icon' title='Remove a task'></i>
+          <i class='fa-solid fa-ellipsis-vertical more-icon' title='See more'></i>
         </li>`
     )
     .join('');
