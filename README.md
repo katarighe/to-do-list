@@ -103,7 +103,7 @@ The To Do List project is built and configured using the following tools:
 
 > The Live Demo of the project is live! Please click the link below. 👇
 
-[Live Demo Link](https://katarighe.github.io/to-do-list/)
+[Live Demo Link](https://katarighe.github.io/to-do-list/dist)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
