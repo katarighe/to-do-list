@@ -20,13 +20,14 @@ const submitIcon = document.querySelector('.to-do-add').querySelector('i');
 newTask.addEventListener('keypress', (event) => addmyTask(event));
 submitIcon.addEventListener('click', () => addmyTask('clicked'));
 
-listGroup.addEventListener('click', event => {
+listGroup.addEventListener('click', (event) => {
   const clickedItem = event.target.classList[event.target.classList.length - 1];
   if (clickedItem === 'refresh-icon') {
-    location.reload();
+    window.location.reload();
   }
 
   const li = event.target.parentElement;
+  if (clickedItem === 'add-icon') addmyTask(li.id);
   if (clickedItem === 'delete-icon') deletemyTask(li.id);
   if (clickedItem === 'check-icon') changeTaskStatus({ index: li.id, status: false });
   if (clickedItem === 'uncheck-icon') changeTaskStatus({ index: li.id, status: true });
