@@ -27,7 +27,7 @@ const getmyTask = () => {
   return taskGroup;
 };
 
-const updateUI = (data) => {
+const updateInterface = (data) => {
   myTask = data;
   getmyTask();
 }
@@ -74,5 +74,5 @@ export {
   editmyTask,
   deletemyTask,
   myTask,
-  updateUI,
+  updateInterface,
 };
