@@ -227,6 +227,6 @@ _NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/
 
 <!-- Project Gallery -->
 ## 🖼️ Project Gallery <a name="gallery"></a>
-
+![image](https://github.com/katarighe/to-do-list/assets/80690364/78c7db5e-4c0e-42a9-99bd-044e4c89ff16)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
