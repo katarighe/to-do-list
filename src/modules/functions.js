@@ -16,7 +16,7 @@ const getmyTask = () => {
 }
       <input type="text" class=${
   item.completed === true ? 'decoration edit-to-do' : 'edit-to-do'
-}  value='${item.description}'>
+}  value='${item.description}' title="Edit this task">
           <span class='edit-focus-element'></span>
           <i class='fa-solid fa-trash delete-icon' title='Remove a task'></i>
           <i class='fa-solid fa-ellipsis-vertical more-icon' title='See more'></i>
