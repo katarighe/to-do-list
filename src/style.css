@@ -20,8 +20,8 @@ body {
   min-height: 50vh;
   margin: 10vh 0;
   background-color: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  border-radius: 3px;
+  box-shadow: 0 10px 10px rgba(10, 10, 10, 0.15);
+  border-radius: 10px;
   padding-bottom: 100px;
   position: relative;
   overflow: hidden;
@@ -43,13 +43,15 @@ body {
 
 .to-do-intro {
   font-size: 15px;
+  background-color: #f5f5dc;
 }
 
 .to-do-intro-title {
   font-size: 20px;
-  color: black;
+  color: #000;
   text-align: center;
   justify-content: center;
+  background-color: #f5f5dc;
 }
 
 .to-do-intro i {
@@ -157,18 +159,18 @@ body {
   bottom: 0;
   outline: none;
   border: 1px;
-  background-color: #f1f2f5;
+  background-color: #f5f5dc;
   font-size: 16px;
   cursor: pointer;
 }
 
 .clear-to-do-list span {
-  color: #808080;
+  color: #ec5242;
 }
 
 .clear-to-do-list span:hover {
   opacity: 1;
-  color: #00ff;
+  color: #000;
   text-decoration: underline;
 }
 
@@ -183,6 +185,10 @@ body {
 
 .delete-icon:active {
   display: block;
+}
+
+.delete-icon:hover {
+  color: #f00;
 }
 
 .edit-to-do:focus ~ .edit-focus-element {
@@ -202,10 +208,30 @@ body {
 }
 
 .refresh-icon {
+  color: #000;
   cursor: pointer;
 }
 
+.refresh-icon::before {
+  font-size: 20px;
+}
+
 .refresh-icon:hover {
+  opacity: 1;
+  color: #00ff;
+  text-decoration: none;
+}
+
+.fa-plus {
+  color: #808080;
+  cursor: pointer;
+}
+
+.fa-plus::before {
+  font-size: 20px;
+}
+
+.fa-plus:hover {
   opacity: 1;
   color: #00ff;
   text-decoration: none;
