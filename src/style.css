@@ -226,16 +226,16 @@ body {
   text-decoration: none;
 }
 
-.fa-plus {
+.add-icon {
   color: #808080;
   cursor: pointer;
 }
 
-.fa-plus::before {
+.add-icon::before {
   font-size: 20px;
 }
 
-.fa-plus:hover {
+.add-icon:hover {
   opacity: 1;
   color: #90ee90;
   text-decoration: none;
