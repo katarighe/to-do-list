@@ -69,7 +69,7 @@ const deletemyTask = (targetIndex) => {
 
 export {
   getmyTask,
-  // Line break here.
+  // Line break here
   addmyTask,
   editmyTask,
   deletemyTask,
