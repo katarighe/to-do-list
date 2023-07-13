@@ -30,7 +30,7 @@ const getmyTask = () => {
 const updateInterface = (data) => {
   myTask = data;
   getmyTask();
-}
+};
 
 const addmyTask = (event) => {
   if (newTask.value === '') return;
