@@ -34,7 +34,7 @@ listGroup.addEventListener('keypress', (event) => {
   if (pressedItem === 'edit-to-do') editmyTask({ index: li.id, event });
 });
 
-const clearCompleted = document.querySelector('.clear-to-do');
+const clearCompleted = document.querySelector('.clear-to-do-list');
 clearCompleted.addEventListener('click', removeCompletedTasks);
 
 window.addEventListener('load', () => { getmyTask(); });
