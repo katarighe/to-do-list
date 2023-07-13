@@ -168,3 +168,7 @@ body {
 .delete-icon:active ~ .more-icon {
   display: none;
 }
+
+.refresh-icon {
+  cursor: pointer;
+}
