@@ -11,7 +11,7 @@ body {
   display: grid;
   align-items: center;
   justify-content: center;
-  background-color: #f1f2f5;
+  background-color: #ffdab9;
 }
 
 .to-do-container {
@@ -81,20 +81,22 @@ body {
   font-size: 12px;
 }
 
-.uncheck-button,
-.check-button {
+.uncheck-icon,
+.check-icon {
   outline: none;
   border: none;
 }
 
-.check-button {
+.check-icon {
   background: transparent;
   color: #2e2e2e;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 20px;
+  width: 18px;
+  height: 18px;
 }
 
-.uncheck-button {
+.uncheck-icon {
   width: 18px;
   height: 18px;
   border-radius: 3px;
@@ -125,6 +127,22 @@ body {
   text-decoration: none;
 }
 
+.delete-icon,
+.more-icon {
+  font-size: 20px;
+  opacity: 0.5;
+  color: #000;
+  cursor: pointer;
+}
+
+.delete-icon {
+  display: none;
+}
+
+.more-icon {
+  display: block;
+}
+
 .to-do-item-more {
   font-size: 16px;
   opacity: 0.5;
@@ -148,6 +166,12 @@ body {
   color: #808080;
 }
 
+.clear-to-do-list span:hover {
+  opacity: 1;
+  color: #00ff;
+  text-decoration: underline;
+}
+
 .edit-focus-element {
   content: "";
   left: 0;
@@ -157,8 +181,16 @@ body {
   background-color: #fff;
 }
 
+.delete-icon:active {
+  display: block;
+}
+
 .edit-to-do:focus ~ .edit-focus-element {
   background-color: #fffcbf;
+}
+
+.edit-to-do:focus ~ .delete-icon {
+  display: block;
 }
 
 .edit-to-do:focus ~ .more-icon {
@@ -171,4 +203,10 @@ body {
 
 .refresh-icon {
   cursor: pointer;
+}
+
+.refresh-icon:hover {
+  opacity: 1;
+  color: #00ff;
+  text-decoration: none;
 }
