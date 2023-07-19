@@ -1,9 +1,9 @@
 import { addmyTask, deletemyTask } from '../src/modules/functions.js';
 jest.mock('../src/modules/user-interface.js');
 
-describe('Add and remove testing', () => {
+describe('Test Add and Remove Features of the To Do List', () => {
   // Start
-  test('Add testing', () => {
+  test('Test the Add (+) feature', () => {
 
     // Arrange (Add)
     document.body.innerHTML = '<div class="to-do-list to-do-add">'
@@ -24,7 +24,7 @@ describe('Add and remove testing', () => {
   });
 
   // Start (Remove)
-  test('Removing item', () => {
+  test('Test the Remove (-) feature', () => {
     // Arrange 
     const myTask = JSON.parse(localStorage.getItem('myTask'));
 
