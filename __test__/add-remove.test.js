@@ -1,10 +1,10 @@
 import { addmyTask, deletemyTask } from '../src/modules/functions.js';
+
 jest.mock('../src/modules/user-interface.js');
 
 describe('Test Add and Remove Features of the To Do List', () => {
   // Start
   test('Test the Add (+) feature', () => {
-
     // Arrange (Add)
     document.body.innerHTML = '<div class="to-do-list to-do-add">'
     + '<input type="text" placeholder="Add to your list..." value="new task">'
@@ -25,7 +25,7 @@ describe('Test Add and Remove Features of the To Do List', () => {
 
   // Start (Remove)
   test('Test the Remove (-) feature', () => {
-    // Arrange 
+    // Arrange
     const myTask = JSON.parse(localStorage.getItem('myTask'));
 
     // Act
