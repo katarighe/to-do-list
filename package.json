@@ -13,7 +13,7 @@
   "jest": {
     "resetMocks": false,
     "setupFiles": [
-      "jest-localstorage-mock"
+      "jest-local-storage-mock"
     ]
   },
   "keywords": [],
@@ -36,5 +36,8 @@
     "webpack": "^5.88.1",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "jest-localstorage-mock": "^2.4.26"
   }
 }
