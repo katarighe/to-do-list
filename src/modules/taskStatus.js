@@ -1,27 +1,31 @@
 import {
-  myTask,
-  getmyTask,
-  updateInterface
-} from './functions.js';
+  getmyTask
+} from './user-interface.js';
+
+import {
+  ls,
+  setTask
+} from './local-storage.js';
 
 const changeTaskStatus = ({ index, status }) => {
+  const myTask = ls();
   myTask[index - 1].completed = status;
-  localStorage.setItem('myTask', JSON.stringify(myTask));
+  setTask(myTask);
   getmyTask();
 };
 
 const removeCompletedTasks = () => {
-  const uncompletedTasks = myTask.filter((task) => task.completed !== true);
-  const newTasks = uncompletedTasks.map((task, index) => {
-    task.index = index + 1;
-    return task;
+  const myTask = ls();
+  const uncompletedTasks = myTask.filter(({ completed }) => completed !== true);
+  const newTasks = uncompletedTasks.map((element, index) => {
+    element.index = index + 1;
+    return element;
   });
-
-  localStorage.setItem('myTask', JSON.stringify(newTasks));
-  updateInterface(newTasks);
+  setTask(newTasks);
+  getmyTask();
 };
 
 export {
   changeTaskStatus,
-  removeCompletedTasks,
+  removeCompletedTasks
 };

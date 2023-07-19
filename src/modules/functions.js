@@ -1,78 +1,48 @@
-let myTask = JSON.parse(localStorage.getItem('myTask')) || [];
-
-const taskGroup = document.querySelector('.to-do-group');
-const newTask = document.querySelector('.to-do-add').querySelector('input');
-
-const getmyTask = () => {
-  const myTaskElement = myTask
-    .map(
-      (item) => `
-  <li class='to-do-list to-do-item' id=${item.index}>
-  ${
-  item.completed === true
-    ? `
-  <i class="fa-solid fa-square-check check-icon" title="Mark task as incomplete"></i>`
-    : '<i class="fa-solid fa-square uncheck-icon" title="Mark task as complete"></i>'
-}
-      <input type="text" class=${
-  item.completed === true ? 'decoration edit-to-do' : 'edit-to-do'
-}  value='${item.description}' title="Edit this task">
-          <span class='edit-focus-element'></span>
-          <i class='fa-solid fa-trash delete-icon' title='Remove a task'></i>
-          <i class='fa-solid fa-ellipsis-vertical more-icon' title='See more'></i>
-        </li>`
-    )
-    .join('');
-  taskGroup.innerHTML = myTaskElement;
-  return taskGroup;
-};
-
-const updateInterface = (data) => {
-  myTask = data;
-  getmyTask();
-};
+import { getmyTask } from './user-interface.js';
+import { ls, setTask } from './local-storage.js';
 
 const addmyTask = (event) => {
+  const myTask = ls();
+  const taskGroup = document.querySelector('.to-do-add');
+  const newTask = taskGroup.querySelector('input');
   if (newTask.value === '') return;
   if (event.key === 'Enter' || event === 'clicked') {
-    const myTaskElement = {
+    const todoElement = {
       description: newTask.value,
       completed: false,
       index: myTask.length + 1,
     };
+
     newTask.value = '';
-    myTask = [...myTask, myTaskElement];
-    localStorage.setItem('myTask', JSON.stringify(myTask));
+    myTask.push(todoElement);
+    setTask(myTask);
     getmyTask();
   }
 };
 
 const editmyTask = ({ index, event }) => {
+  const myTask = ls();
   if (event.target.value === '') return;
-  event.target.addEventListener('blur', () => {
+  if (event.key === 'Enter') {
     myTask[index - 1].description = event.target.value;
-    localStorage.setItem('myTask', JSON.stringify(myTask));
-  });
+    setTask(myTask);
+  }
 };
 
 const deletemyTask = (targetIndex) => {
-  const filterTask = myTask.filter((task) => +task.index !== +targetIndex);
-  const newmyTask = filterTask.map((task, index) => ({
-    description: task.description,
-    completed: task.completed,
-    index: index + 1,
-  }));
-  localStorage.setItem('myTask', JSON.stringify(newmyTask));
-  myTask = newmyTask;
+  const myTask = ls();
+  const filterTask = myTask.filter(({ index }) => index !== parseInt(targetIndex));
+  const newmyTask = filterTask.map((item, i) => {
+    item.index = i + 1;
+    return item;
+  });
+  setTask(newmyTask);
   getmyTask();
 };
 
 export {
-  getmyTask,
-  // Line break here
   addmyTask,
+  // Line break here
   editmyTask,
   deletemyTask,
-  myTask,
-  updateInterface,
 };
