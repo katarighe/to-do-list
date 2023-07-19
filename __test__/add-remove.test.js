@@ -27,6 +27,15 @@ describe('Add and remove testing',() => {
     });
 
 // Start for Remove Items
+test('Removing item', () => {
+  // Arrange the lines
+  const myTask = JSON.parse(localStorage.getItem('myTask'));
 
+  // Act the remove task
+  deletemylist(1);
+  const newTask = JSON.parse(localStorage.getItem('myTask'));
 
+  // Assert the remove task
+  expect(newTask.length).toBe(myTask.length - 1);
+});
 });
