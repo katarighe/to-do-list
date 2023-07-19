@@ -1,11 +1,11 @@
 import './style.css';
 
 import {
-  getmyTask,
-  // Line break here.
-  addmyTask,
-  editmyTask,
-  deletemyTask,
+  getmyTask
+} from './modules/user-interface.js';
+
+import {
+  addmyTask, editmyTask, deletemyTask,
 } from './modules/functions.js';
 
 import {
