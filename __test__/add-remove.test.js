@@ -6,6 +6,7 @@ import {
 jest.mock('../src/modules/inteface.js');
 
 describe('Add and remove testing',() => {
+    // Start for Add Item
     test('Add testing', () => {
         // Arrange the elements
         document.body.innerHTML = '<div class="to-do-list to-do-add">'
@@ -25,7 +26,7 @@ describe('Add and remove testing',() => {
         expect(newTask[newTaskLength - 1].description).toBe('new task');
     });
 
+// Start for Remove Items
 
 
-    
 });
