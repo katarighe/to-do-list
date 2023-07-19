@@ -1,8 +1,4 @@
-import {
-  addmyTask,
-  deletemyTask
-} from '../src/modules/functions.js';
-
+import { addmyTask, deletemyTask } from '../src/modules/functions.js';
 jest.mock('../src/modules/inteface.js');
 
 describe('Add and remove testing', () => {
