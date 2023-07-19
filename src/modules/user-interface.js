@@ -1,5 +1,5 @@
-import { 
-  ls 
+import {
+  ls
 } from './local-storage.js';
 
 const getmyTask = () => {
@@ -14,7 +14,7 @@ const getmyTask = () => {
           <i class="fa-solid fa-trash delete-icon" title='Remove a task'></i>
           <i class="fa-solid fa-ellipsis-vertical more-icon" title='See more'></i>
         </li>`).join('');
-  return document.querySelector('.todo-group').innerHTML = myTaskElement;
+  return document.querySelector('.to-do-group').innerHTML = myTaskElement;
 };
 
 export { getmyTask };
