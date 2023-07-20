@@ -10,17 +10,17 @@ jest.mock('../src/modules/user-interface.js');
 const editableStorage = [
   {
     index: 1,
-    description: 'This is Test1',
+    description: 'This is Test 1',
     completed: false,
   },
   {
     index: 2,
-    description: 'This is Test2',
+    description: 'This is Test 2',
     completed: false,
   },
   {
     index: 3,
-    description: 'This is Test3',
+    description: 'This is Test 3',
     completed: false,
   },
 ];
