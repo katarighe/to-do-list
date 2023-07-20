@@ -50,8 +50,7 @@ describe('Edit Completed Task', () => {
 });
 
 // Start (Complete Task function)
-
-  describe('Completed Task Description', () => {
+describe('Completed Task Description', () => {
   test('Update the Completed Status', () => {
     // Arrange
     const setUp = {
