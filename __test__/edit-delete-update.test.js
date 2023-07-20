@@ -25,7 +25,7 @@ const editableStorage = [
   },
 ];
 
-describe('Edit Completed Task Description', () => {
+describe('Edit Completed Task', () => {
   // Start (Edit Task function)
   test('Editing Completed Tasks', () => {
     // Arrange
