@@ -50,4 +50,25 @@ describe('Edit Completed Task', () => {
 });
 
 // Start (Complete Task function)
-// Enter the details here
+
+  describe('Completed Task Description', () => {
+  test('Update the Completed Status', () => {
+    // Arrange
+    const setUp = {
+      index: 3,
+      status: true,
+    };
+    // Act
+    changeTaskStatus(setUp);
+    const newLS = ls();
+    // Assert
+    expect(newLS[setUp.index - 1].completed).toBeTruthy();
+  });
+  test('Remove Completed Tasks', () => {
+    // Act
+    removeCompletedTasks();
+    const newLS = ls();
+    // Assert
+    expect(newLS.length).toBeLessThan(editableStorage.length);
+  });
+});
